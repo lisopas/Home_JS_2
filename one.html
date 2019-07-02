@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home №1</title>
+</head>
+<body>
+<script>
+
+
+    //10
+    var min = 0;
+    var max = 100;
+    var average = (max - min) / 2;
+    var choice;
+    do {
+        choice = prompt("> " + (Math.round((max + min) / 2)) + " ? 1 - yes, 2 - no 3 - it's a my number, dude");
+        switch (choice) {
+            case '1': {
+                min = (max + min) / 2;
+                if (max - min == 1) {
+                    choice = prompt("Это число " + Math.round(max) + " ? 1 - yes, 2 - no");
+                    switch (choice) {
+                        case '1': {
+                            alert("Я победил! (:");
+                            break;
+                        }
+                        case '2': {
+                            alert("Это число " + Math.round(min) + ", я победил! (:");
+                            break;
+                        }
+                    }
+                }
+                break;
+            }
+            case '2': {
+                max = (max + min) / 2;
+                if (max - min == 1) {
+                    choice = prompt("Это число " + Math.round(max) + " ? 1 - yes, 2 - no");
+                    switch (choice) {
+                        case '1': {
+                            alert("Я победил! (:");
+                            break;
+                        }
+                        case '2': {
+                            alert("Это число " + Math.round(min) + ", я победил! (:");
+                            break;
+                        }
+                    }
+                }
+                break;
+            }
+
+            case '3': {
+                alert("Это число " + Math.round(((max + min) / 2)) + " , я победил! (:");
+                break;
+            }
+        }
+    } while (min != average || average != max);
+</script>
+</body>
+</html>
