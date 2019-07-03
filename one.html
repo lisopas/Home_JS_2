@@ -6,13 +6,37 @@
 </head>
 <body>
 <script>
-
+    // //1
+    // let a = 2;
+    // let b = 5;
+    // let sum = 0;
+    // while (a <= b)
+    // {
+    //     sum = sum + a;
+    //     a++;
+    // }
+    // alert(sum);
+    //2
+    let arr = [2, 5, 6];
+    let c = nok(arr);
+    function nok(A)
+    {
+        var  n = A.length, a = Math.abs(A[0]);
+        for (var i = 1; i < n; i++)
+        { var b = Math.abs(A[ i ]), c = a;
+            while (a && b){ a > b ? a %= b : b %= a; }
+            a = Math.abs(c*A[ i ])/(a+b);
+        }
+        return a;
+    }
+    alert(c);
+    //3
 
     //10
-    var min = 0;
-    var max = 100;
-    var average = (max - min) / 2;
-    var choice;
+    let min = 0;
+    let max = 100;
+    let average = (max - min) / 2;
+    let choice;
     do {
         choice = prompt("> " + (Math.round((max + min) / 2)) + " ? 1 - yes, 2 - no 3 - it's a my number, dude");
         switch (choice) {
