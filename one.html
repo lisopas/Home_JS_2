@@ -17,70 +17,208 @@
     // }
     // alert(sum);
     //2
-    let arr = [2, 5, 6];
-    let c = nok(arr);
-    function nok(A)
-    {
-        var  n = A.length, a = Math.abs(A[0]);
-        for (var i = 1; i < n; i++)
-        { var b = Math.abs(A[ i ]), c = a;
-            while (a && b){ a > b ? a %= b : b %= a; }
-            a = Math.abs(c*A[ i ])/(a+b);
-        }
-        return a;
-    }
-    alert(c);
+    // let arr = [2, 5, 6];
+    // let c = nok(arr);
+    // function nok(A) {
+    //     var n = A.length, a = Math.abs(A[0]);
+    //     for (var i = 1; i < n; i++) {
+    //         var b = Math.abs(A[i]), c = a;
+    //         while (a && b) {
+    //             a > b ? a %= b : b %= a;
+    //         }
+    //         a = Math.abs(c * A[i]) / (a + b);
+    //     }
+    //     return a;
+    // }
+    // alert(c);
     //3
-
+    // let n = 255;
+    // let k = 5; // Выбранное число
+    // let divisor = [];
+    // if (n % k == 0) {
+    //     divisor.push(k);
+    //     n = Math.round(n / 3);
+    //     let maximum = n / 2;
+    //     for (let i = 2; i <= maximum; i++) {
+    //         if (n % i == 0) {
+    //             divisor.push(k * i);
+    //         };
+    //     };
+    //     divisor.push(k * n);
+    // };
+    // alert(divisor);
+    // 4
+    // let number = prompt("Введите число");
+    // let count = (number + '').replace('.', '').length;
+    // alert(count + " - Количество цифр");
+    //5
+    // let chisla;
+    // let nuli = 0;
+    // let chetnie = 0;
+    // let nectetnie = 0;
+    // let polozhitelnie = 0;
+    // let otricatelnie = 0;
+    // for (let i = 1; i <= 10; i++) {
+    //     chisla = prompt("Число " + i + " - ");
+    //     if (chisla == 0) {
+    //         nuli++;
+    //     }
+    //     if (chisla > 0) {
+    //         polozhitelnie++;
+    //     }
+    //     if (chisla < 0) {
+    //         otricatelnie++;
+    //     }
+    //     if (chisla % 2 == 0) {
+    //         chetnie++;
+    //     }
+    //     if (chisla % 2 != 0) {
+    //         nectetnie++;
+    //     }
+    // }
+    // alert("Нули - " + nuli + " положительные - " + polozhitelnie +
+    //     " отрицательные - " + otricatelnie + " четные - "
+    //     + chetnie + " нечетные - " + nectetnie);
+    //6
+    // do {
+    //     let a = 6//prompt("Первое число");
+    //     let b = 2//prompt("Второе число");
+    //     let vibor = prompt("1 - Сложение, 2 - вычитание, 3 - умножение, 4 - деление");
+    //     let result;
+    //     switch (vibor)
+    //     {
+    //         case '1':
+    //         {
+    //             result = a + b;
+    //             break;
+    //         }
+    //         case '2':
+    //         {
+    //             result = a - b;
+    //             break;
+    //         }
+    //         case '3':
+    //         {
+    //             result = a * b;
+    //             break;
+    //         }
+    //         case '4':
+    //         {
+    //             result = a / b;
+    //             break;
+    //         }
+    //     }
+    //     let contin = prompt("Результат - " + result + " , хотите продолжить? 1 - да, 2 - нет");
+    //     if (contin == 2)
+    //     {
+    //         alert("Выходим");
+    //         break;
+    //     }
+    // } while (true)
+    //7
+    // let str = prompt("Введите число!");
+    // alert(str.substring(2) + str.substring(0, 2));
+    //8
+    // let dni = 0;
+    // let vibiraem = 10;
+    // while (vibiraem != 2) {
+    //     dni++;
+    //     if (dni > 7) {
+    //         dni = 1;
+    //     }
+    //     switch (dni) {
+    //         case 1: {
+    //             alert("Понедельник");
+    //             break;
+    //         }
+    //         case 2: {
+    //             alert("Вторник");
+    //             break;
+    //         }
+    //         case 3: {
+    //             alert("Среда");
+    //             break;
+    //         }
+    //         case 4: {
+    //             alert("Четверг");
+    //             break;
+    //         }
+    //         case 5: {
+    //             alert("Пятница");
+    //             break;
+    //         }
+    //         case 6: {
+    //             alert("Суббота");
+    //             break;
+    //         }
+    //         case 7: {
+    //             alert("Воскресенье");
+    //             break;
+    //         }
+    //     }
+    //     vibiraem = prompt("Продолжить? 1 - да, 2 - нет");
+    //     if (vibiraem == 2) {
+    //         alert("Выходим");
+    //         break;
+    //     }
+    // }
+    //9
+    // for (let i = 2; i <= 9; i++)
+    // {
+    //     for (let j = 1; j <= 10; j++)
+    //     {
+    //         console.log(i * j);
+    //     }
+    // }
     //10
-    let min = 0;
-    let max = 100;
-    let average = (max - min) / 2;
-    let choice;
-    do {
-        choice = prompt("> " + (Math.round((max + min) / 2)) + " ? 1 - yes, 2 - no 3 - it's a my number, dude");
-        switch (choice) {
-            case '1': {
-                min = (max + min) / 2;
-                if (max - min == 1) {
-                    choice = prompt("Это число " + Math.round(max) + " ? 1 - yes, 2 - no");
-                    switch (choice) {
-                        case '1': {
-                            alert("Я победил! (:");
-                            break;
-                        }
-                        case '2': {
-                            alert("Это число " + Math.round(min) + ", я победил! (:");
-                            break;
-                        }
-                    }
-                }
-                break;
-            }
-            case '2': {
-                max = (max + min) / 2;
-                if (max - min == 1) {
-                    choice = prompt("Это число " + Math.round(max) + " ? 1 - yes, 2 - no");
-                    switch (choice) {
-                        case '1': {
-                            alert("Я победил! (:");
-                            break;
-                        }
-                        case '2': {
-                            alert("Это число " + Math.round(min) + ", я победил! (:");
-                            break;
-                        }
-                    }
-                }
-                break;
-            }
-
-            case '3': {
-                alert("Это число " + Math.round(((max + min) / 2)) + " , я победил! (:");
-                break;
-            }
-        }
-    } while (min != average || average != max);
+    // let min = 0;
+    // let max = 100;
+    // let average = (max - min) / 2;
+    // let choice;
+    // do {
+    //     choice = prompt("> " + (Math.round((max + min) / 2)) + " ? 1 - yes, 2 - no 3 - it's a my number, dude");
+    //     switch (choice) {
+    //         case '1': {
+    //             min = (max + min) / 2;
+    //             if (max - min == 1) {
+    //                 choice = prompt("Это число " + Math.round(max) + " ? 1 - yes, 2 - no");
+    //                 switch (choice) {
+    //                     case '1': {
+    //                         alert("Я победил! (:");
+    //                         break;
+    //                     }
+    //                     case '2': {
+    //                         alert("Это число " + Math.round(min) + ", я победил! (:");
+    //                         break;
+    //                     }
+    //                 }
+    //             }
+    //             break;
+    //         }
+    //         case '2': {
+    //             max = (max + min) / 2;
+    //             if (max - min == 1) {
+    //                 choice = prompt("Это число " + Math.round(max) + " ? 1 - yes, 2 - no");
+    //                 switch (choice) {
+    //                     case '1': {
+    //                         alert("Я победил! (:");
+    //                         break;
+    //                     }
+    //                     case '2': {
+    //                         alert("Это число " + Math.round(min) + ", я победил! (:");
+    //                         break;
+    //                     }
+    //                 }
+    //             }
+    //             break;
+    //         }
+    //
+    //         case '3': {
+    //             alert("Это число " + Math.round(((max + min) / 2)) + " , я победил! (:");
+    //             break;
+    //         }
+    //     }
+    // } while (min != average || average != max);
 </script>
 </body>
 </html>
